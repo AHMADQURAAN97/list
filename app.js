@@ -2,9 +2,9 @@
 
 let container = document.getElementById('container');
 let myForm =document.getElementById('myform');
-let tableContainer=document.getElementById('table-container');
+let tableContainer = document.getElementById('table-container');
 let tableEl=document.createElement('table');
-tableContainer.appendChild(tableEl);
+
 
 let tasks = [];
 
@@ -27,20 +27,21 @@ function createTableHeader (){
     thTaskEl.textcontent="Task";
     trEl.appendChild(thTaskEl);
 
-    let thDateEl=document.createElement('th');
+    let thDateEl = document.createElement('th');
     thDateEl.textcontent="Date";
     trEl.appendChild(thDateEl);
 
     
-    let thUrgencyEl=document.createElement('th');
+    let thUrgencyEl = document.createElement('th');
     thUrgencyEl.textcontent="Urgency";
     trEl.appendChild(thUrgencyEl);
 
-    let thRemoveEl=document.createElement('th');
+    let thRemoveEl = document.createElement('th');
     thRemoveEl.textcontent="Delete";
     trEl.appendChild(thRemoveEl);
 
     tableEl.appendChild(trEl);
+    tableContainer.appendChild(tableEl);
 }
 
 
@@ -65,6 +66,8 @@ tTask.prototype.render=function() {
     trEl.appendChild(tdEl4);
 
     tableEl.appendChild(trEl);
+    tableContainer.appendChild(tableEl);
+
 };
 
 // ====================================Form=============================
@@ -87,12 +90,12 @@ newTask.render();
 function saveToLocalStorage (){
 
 let saveLocal = JSON.stringify (tasks);
-localStorage.setItem('task',saveLocal); 
+localStorage.setItem('taask',saveLocal); 
 }
 
 function readFromLocalStorage (){
 
-    let stringObj = localStorage.getItem('task');
+    let stringObj = localStorage.getItem('taask');
     let normalObj = JSON.parse (stringObj);
     if (normalObj !== null) {
         for ( let i=0 ; i < normalObj.length ; i++){

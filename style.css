@@ -7,6 +7,7 @@ header h1 {
     text-align: center;
     color: white;
     padding: 50px;
+    margin: 0;
 }
 header {
     background-color: #1F1F1F;
@@ -16,6 +17,7 @@ header {
 
 main {
     background-image: url('background-img-M104.jpg'); height: 500px;
+    
 }
 
 
@@ -55,9 +57,9 @@ input[type=submit] {
 
 table{
 
-    background-color: rgb(50, 13, 109,.8);
+    background-color: rgb(0, 79, 143,.8);
     
-    border:5px white;
+    /* border:5px white; */
     margin-left: 150px;
     margin-top: 50px;
     padding: 50px;
@@ -65,10 +67,10 @@ table{
     padding-bottom: 80px;
     }
       
-      td , th {
-    height: 100px;
-    width: 50px;
-    font-size: 20px;
-    background-color: #1F1F1F;
-    color:white
-      }
+    td , th {
+        height: 100px;
+        width: 50px;
+        font-size: 20px;
+        background-color: #1F1F1F;
+        color:white
+          }
